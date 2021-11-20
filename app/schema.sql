@@ -1,0 +1,5 @@
+CREATE TABLE IF NOT EXISTS "tabel" (
+	"colA"	INTEGER NOT NULL UNIQUE,
+	"colB"	TEXT NOT NULL,
+    "colC"  TEXT
+);
