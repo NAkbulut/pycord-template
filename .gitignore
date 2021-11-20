@@ -1,7 +1,4 @@
 /.idea
 /venv
 /.vscode
-/app/purge_roles.txt
-/app/excluded_roles.txt
 /app/*.sqlite3
-config.yml

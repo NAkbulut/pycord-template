@@ -1,0 +1,11 @@
+bot:
+  token: 
+  dev:
+    - 
+guild:
+  id:
+  roles:
+    admin:
+    user:
+  channels:
+    announcements:
