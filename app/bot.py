@@ -2,7 +2,7 @@ import os
 import discord
 from discord.ext import commands
 from utils.config import config
-from utils.database import projectDb
+from utils.database import ProjectDB
 
 
 my_intents = discord.Intents.all()
@@ -16,7 +16,7 @@ async def on_ready():
 
 if __name__ == '__main__':
     with open('./schema.sql') as f:
-        with projectDb() as c:
+        with ProjectDB() as c:
             c.executescript(f.read())
 
     for filename in os.listdir('../app/cogs/'):
