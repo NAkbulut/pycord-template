@@ -19,4 +19,4 @@ class ProjectDB():
         self.conn.close()
 
 
-db = projectDb()
+db = ProjectDB()
