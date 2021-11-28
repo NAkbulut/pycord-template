@@ -1,7 +1,7 @@
 import sqlite3
 
 
-class projectDb():
+class ProjectDB():
     """
     Simple CM for sqlite3 databases. Commits everything at exit.
     """
