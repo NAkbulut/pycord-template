@@ -6,12 +6,12 @@ from utils.database import ProjectDB
 
 
 my_intents = discord.Intents.all()
-client = commands.Bot(command_prefix=',', intents = my_intents, case_insensitive=True)
+bot = commands.Bot(command_prefix=',', intents = my_intents, case_insensitive=True)
 
 
-@client.event
+@bot.event
 async def on_ready():
-    print(f'Logged in as {client.user.name} - {client.user.id}!')
+    print(f'Logged in as {bot.user.name} - {bot.user.id}!')
 
 
 if __name__ == '__main__':
@@ -21,6 +21,6 @@ if __name__ == '__main__':
 
     for filename in os.listdir('../app/cogs/'):
         if filename.endswith('.py') and not filename.startswith('__'):
-            client.load_extension(f'cogs.{filename[:-3]}')
+            bot.load_extension(f'cogs.{filename[:-3]}')
 
-client.run(config['bot']['token'])
+bot.run(config['bot']['token'])
