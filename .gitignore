@@ -1,4 +1,6 @@
 /.idea
 /venv
 /.vscode
+**/__pycache__
 /app/*.sqlite3
+config.yml
