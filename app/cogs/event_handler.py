@@ -13,7 +13,7 @@ class EventHandler(commands.Cog):
         print(f"{self.__class__.__name__} Cog has been loaded!")
 
     @commands.Cog.listener()
-    async def on_command_error(self, ctx: commands.Context, error: commands.CommandError):
+    async def on_application_command_error(self, ctx: commands.Context, error: commands.CommandError):
         title, desc = 'Command Error', error
         if isinstance(error, commands.MissingAnyRole):
             title = 'Missing Permissions'
@@ -25,11 +25,6 @@ class EventHandler(commands.Cog):
             colour=discord.Colour.red()
         )
         await ctx.reply(embed=embed)
-
-    @commands.Cog.listener()
-    async def on_message(self, message: discord.Message):
-        if isinstance(message.channel, discord.DMChannel):
-            return
 
 
 def setup(bot):

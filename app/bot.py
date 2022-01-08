@@ -13,6 +13,10 @@ bot = commands.Bot(command_prefix=',', intents = my_intents, case_insensitive=Tr
 async def on_ready():
     print(f'Logged in as {bot.user.name} - {bot.user.id}!')
 
+@bot.event
+async def on_message(message: discord.Message):
+    if isinstance(message.channel, discord.DMChannel):
+        return
 
 if __name__ == '__main__':
     with open('./schema.sql') as f:
