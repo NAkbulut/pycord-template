@@ -6,7 +6,7 @@ from discord.ext import commands
 
 class EventHandler(commands.Cog):
     def __init__(self, bot):
-        self.bot: discord.Client = bot
+        self.bot: commands.Bot = bot
 
     @commands.Cog.listener()
     async def on_ready(self):
